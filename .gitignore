@@ -1,0 +1,6 @@
+#Ignore vscode folder
+.vscode/
+
+#ignore env
+env/
+*.env
