@@ -18,7 +18,7 @@ st.title(":bar_chart: Superstore EDA")
 fl = st.file_uploader(":file_folder: upload the file", type=(["csv", "txt", "xlsx", "xls"])) #gets the file
 if fl is not None:
     filename = fl.name #define the name of the file
-    suffix = Path(filename).suffix
+    suffix =Path(filename).suffix
     if suffix == "xls" or suffix == "xlsx":
         df = pd.read_excel(fl, sheet_name=None, header=0)
         combined_df = pd.concat(df.values(), ignore_index=True)
@@ -28,7 +28,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(new_filename, encoding = "utf-8")
 else:
-    os.chdir(r"C:\Users\User\Desktop\Python_projects\data analysis engineering projects")
+    os.chdir(r"D:\dashboards")
     df = pd.read_csv("SuperstoreNew.csv", encoding = "utf-8")
 #read the file uploaded or the file in the folder by default
 
